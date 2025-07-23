@@ -570,6 +570,20 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+/* Learn More Link */
+.learn-more-link {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-fast);
+}
+.learn-more-link:hover {
+    color: var(--primary-blue-dark);
+    transform: translateX(2px);
+}
+
 /* Modal */
 .modal {
     display: none;
