@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Automation Agency - Transform Your Business with Intelligent Automation</title>
+    <meta name="description" content="Leading AI Automation Agency helping businesses achieve measurable ROI through Process Automation, Advanced AI, and Custom AI Agents.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>AI<span class="accent">Automate</span></h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#consultation" class="nav-link cta-button">Free Consultation</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Transform Your Business with 
+                        <span class="gradient-text">AI Automation</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        We help B2B companies achieve 40-70% operational efficiency gains through intelligent automation solutions. From process optimization to custom AI agents, we deliver measurable ROI in 90 days or less.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">$2.3M+</span>
+                            <span class="stat-label">Cost Savings Generated</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Processes Automated</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                    </div>
+                    <div class="hero-cta">
+                        <button class="cta-primary" onclick="openConsultationModal()">
+                            Get Your Free ROI Assessment
+                        </button>
+                        <button class="cta-secondary" onclick="scrollToSection('case-studies')">
+                            View Case Studies
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="automation-demo">
+                        <div class="demo-card active" data-step="1">
+                            <div class="demo-icon">📊</div>
+                            <h3>Data Analysis</h3>
+                            <p>AI processes 10,000+ data points</p>
+                        </div>
+                        <div class="demo-card" data-step="2">
+                            <div class="demo-icon">⚡</div>
+                            <h3>Process Automation</h3>
+                            <p>Tasks completed in seconds</p>
+                        </div>
+                        <div class="demo-card" data-step="3">
+                            <div class="demo-icon">📈</div>
+                            <h3>ROI Generated</h3>
+                            <p>Measurable business impact</p>
+                        </div>
+                        <div class="demo-connector"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <p class="social-proof-text">Trusted by industry leaders</p>
+            <div class="client-logos">
+                <div class="logo-item">
+                    <div class="logo-placeholder">TechCorp</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-placeholder">InnovateCo</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-placeholder">DataSystems</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-placeholder">AutoFlow</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-placeholder">SmartOps</div>
+                </div>
+                <div class="logo-item">
+                    <div class="logo-placeholder">FutureTech</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Framework -->
+    <section class="problem-solution">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Hidden Cost of Manual Processes</h2>
+                <p>Most businesses lose 20-30% of their productivity to repetitive tasks that could be automated</p>
+            </div>
+            
+            <div class="problem-solution-grid">
+                <div class="problem-side">
+                    <h3>Common Business Challenges</h3>
+                    <div class="challenge-list">
+                        <div class="challenge-item">
+                            <div class="challenge-icon">⏰</div>
+                            <div class="challenge-content">
+                                <h4>Time-Consuming Manual Tasks</h4>
+                                <p>Employees spend 40% of their time on repetitive work that adds no strategic value</p>
+                            </div>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">💸</div>
+                            <div class="challenge-content">
+                                <h4>Rising Operational Costs</h4>
+                                <p>Manual processes cost 5-10x more than automated alternatives</p>
+                            </div>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">📉</div>
+                            <div class="challenge-content">
+                                <h4>Inconsistent Results</h4>
+                                <p>Human error leads to quality issues and compliance risks</p>
+                            </div>
+                        </div>
+                        <div class="challenge-item">
+                            <div class="challenge-icon">🔄</div>
+                            <div class="challenge-content">
+                                <h4>Scaling Limitations</h4>
+                                <p>Growth is constrained by manual process bottlenecks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="solution-side">
+                    <h3>Our AI Automation Solutions</h3>
+                    <div class="solution-list">
+                        <div class="solution-item">
+                            <div class="solution-icon">🚀</div>
+                            <div class="solution-content">
+                                <h4>Intelligent Process Automation</h4>
+                                <p>Automate complex workflows with AI-powered decision making</p>
+                                <span class="roi-indicator">ROI: 300-500%</span>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <div class="solution-icon">🧠</div>
+                            <div class="solution-content">
+                                <h4>Advanced AI Integration</h4>
+                                <p>Deploy machine learning models for predictive analytics and optimization</p>
+                                <span class="roi-indicator">ROI: 400-600%</span>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <div class="solution-icon">🤖</div>
+                            <div class="solution-content">
+                                <h4>Custom AI Agents</h4>
+                                <p>Bespoke AI solutions tailored to your specific business needs</p>
+                                <span class="roi-indicator">ROI: 500-800%</span>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <div class="solution-icon">📊</div>
+                            <div class="solution-content">
+                                <h4>Performance Analytics</h4>
+                                <p>Real-time monitoring and optimization of automated processes</p>
+                                <span class="roi-indicator">ROI: 200-400%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Tiers Overview -->
+    <section class="service-tiers" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Automation Journey</h2>
+                <p>Scalable solutions designed to grow with your business</p>
+            </div>
+            
+            <div class="tiers-grid">
+                <!-- Tier 1: Process Automation -->
+                <div class="tier-card starter">
+                    <div class="tier-header">
+                        <h3>Process Automation</h3>
+                        <p class="tier-subtitle">Perfect for getting started</p>
+                        <div class="tier-price">
+                            <span class="price">Starting at $5,000</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="tier-features">
+                        <ul>
+                            <li>✓ Up to 5 automated workflows</li>
+                            <li>✓ Basic AI decision trees</li>
+                            <li>✓ Email & document automation</li>
+                            <li>✓ Standard integrations</li>
+                            <li>✓ Monthly performance reports</li>
+                            <li>✓ Email support</li>
+                        </ul>
+                    </div>
+                    <div class="tier-roi">
+                        <div class="roi-badge">
+                            <span class="roi-label">Expected ROI</span>
+                            <span class="roi-value">300-400%</span>
+                        </div>
+                    </div>
+                    <button class="tier-cta" onclick="openConsultationModal('process-automation')">
+                        Start Automation
+                    </button>
+                </div>
+
+                <!-- Tier 2: Advanced AI -->
+                <div class="tier-card professional popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="tier-header">
+                        <h3>Advanced AI</h3>
+                        <p class="tier-subtitle">For growing businesses</p>
+                        <div class="tier-price">
+                            <span class="price">Starting at $15,000</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <div class="tier-features">
+                        <ul>
+                            <li>✓ Everything in Process Automation</li>
+                            <li>✓ Machine learning models</li>
+                            <li>✓ Predictive analytics</li>
+                            <li>✓ Advanced data processing</li>
+                            <li>✓ Custom API integrations</li>
+                            <li>✓ Real-time monitoring</li>
+                            <li>✓ Priority support</li>
+                        </ul>
+                    </div>
+                    <div class="tier-roi">
+                        <div class="roi-badge">
+                            <span class="roi-label">Expected ROI</span>
+                            <span class="roi-value">400-600%</span>
+                        </div>
+                    </div>
+                    <button class="tier-cta" onclick="openConsultationModal('advanced-ai')">
+                        Upgrade to AI
+                    </button>
+                </div>
+
+                <!-- Tier 3: Custom AI Agents -->
+                <div class="tier-card enterprise">
+                    <div class="tier-header">
+                        <h3>Custom AI Agents</h3>
+                        <p class="tier-subtitle">Enterprise-grade solutions</p>
+                        <div class="tier-price">
+                            <span class="price">Custom Pricing</span>
+                            <span class="price-period">Contact us</span>
+                        </div>
+                    </div>
+                    <div class="tier-features">
+                        <ul>
+                            <li>✓ Everything in Advanced AI</li>
+                            <li>✓ Bespoke AI agent development</li>
+                            <li>✓ Multi-modal AI capabilities</li>
+                            <li>✓ Enterprise integrations</li>
+                            <li>✓ Dedicated success manager</li>
+                            <li>✓ 24/7 premium support</li>
+                            <li>✓ Custom SLAs</li>
+                        </ul>
+                    </div>
+                    <div class="tier-roi">
+                        <div class="roi-badge">
+                            <span class="roi-label">Expected ROI</span>
+                            <span class="roi-value">500-800%</span>
+                        </div>
+                    </div>
+                    <button class="tier-cta" onclick="openConsultationModal('custom-ai-agents')">
+                        Get Custom Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Modal -->
+    <div id="consultationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConsultationModal()">&times;</span>
+            <h2>Get Your Free ROI Assessment</h2>
+            <p>Discover how much you could save with AI automation</p>
+            <form id="consultationForm" class="consultation-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Business Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name *</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="employees">Number of Employees</label>
+                    <select id="employees" name="employees">
+                        <option value="">Select range</option>
+                        <option value="1-10">1-10</option>
+                        <option value="11-50">11-50</option>
+                        <option value="51-200">51-200</option>
+                        <option value="201-1000">201-1000</option>
+                        <option value="1000+">1000+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interest</label>
+                    <select id="service" name="service">
+                        <option value="">Select service</option>
+                        <option value="process-automation">Process Automation</option>
+                        <option value="advanced-ai">Advanced AI</option>
+                        <option value="custom-ai-agents">Custom AI Agents</option>
+                        <option value="not-sure">Not sure yet</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="challenges">Biggest Automation Challenge</label>
+                    <textarea id="challenges" name="challenges" rows="3" placeholder="Describe your main pain points..."></textarea>
+                </div>
+                <button type="submit" class="form-submit">
+                    Get My Free Assessment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
