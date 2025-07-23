@@ -79,11 +79,19 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--neutral-200);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     z-index: 1000;
-    transition: var(--transition-normal);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Navbar style after scroll */
+.navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 .nav-container {
@@ -117,11 +125,41 @@ body {
 }
 
 .nav-link {
-    text-decoration: none;
-    color: var(--neutral-700);
-    font-weight: 500;
-    transition: var(--transition-fast);
     position: relative;
+    text-decoration: none;
+    color: var(--neutral-800);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+/* Animated underline */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--primary-blue);
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: var(--primary-blue);
+    font-weight: 600;
 }
 
 .nav-link:hover {
@@ -153,6 +191,44 @@ body {
     background: var(--neutral-700);
     margin: 3px 0;
     transition: var(--transition-fast);
+}
+
+/* Dropdown Menu */
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(15, 12, 41, 0.95);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.25rem;
+    min-width: 220px;
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 0.4rem 0;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.dropdown-content a:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+.nav-item.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeInUp 0.3s ease-out;
 }
 
 /* Hero Section */

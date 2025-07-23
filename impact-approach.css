@@ -1,5 +1,33 @@
 /* Impact & Approach Page Styles */
 
+/* Navigation - World Class Styling (match About page) */
+.impact-approach-page .navbar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.impact-approach-page .navbar.scrolled {
+    background: rgba(15, 12, 41, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.impact-approach-page .navbar.scrolled .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.impact-approach-page .navbar.scrolled .nav-link:hover {
+    color: #ffffff;
+}
+
+.impact-approach-page .navbar:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+
 /* Page-specific body class for scoped styling */
 .impact-approach-page {
     font-family: 'Inter', sans-serif;
