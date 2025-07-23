@@ -344,12 +344,34 @@
 }
 
 .founder-photo {
-    width: 250px;
-    height: 250px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     object-fit: cover;
-    border: 6px solid white;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    border: 5px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient ring around the photo */
+.founder-photo::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    z-index: -1;
 }
 
 .founder-bio {
@@ -511,7 +533,183 @@
     background: #f7fafc;
 }
 
+/* Navigation - World Class Styling */
+.about-page .navbar {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-page .navbar.scrolled {
+    background: rgba(15, 12, 41, 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-page .navbar.scrolled .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.about-page .navbar.scrolled .nav-link:hover {
+    color: #ffffff;
+}
+
+.about-page .navbar:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Dropdown Menu */
+.about-page .nav-item.dropdown {
+    position: relative;
+}
+
+.about-page .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(15, 12, 41, 0.95);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    padding: 1rem 1.25rem;
+    min-width: 220px;
+    z-index: 1000;
+}
+
+.about-page .dropdown-content a {
+    display: block;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    padding: 0.4rem 0;
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.about-page .dropdown-content a:hover {
+    color: #ffffff;
+    transform: translateX(4px);
+}
+
+.about-page .nav-item.dropdown:hover .dropdown-content {
+    display: block;
+    animation: fadeInUp 0.3s ease-out;
+}
+
+.about-page .nav-link,
+.about-page .nav-link:visited {
+    position: relative;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    color: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-page .nav-item:not(:last-child) {
+    margin-right: 1.2rem;
+}
+
+.about-page .nav-logo a {
+    font-size: 1.35rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+}
+
+
+.about-page .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.about-page .nav-link:hover {
+    color: #f0f8ff;
+}
+
+.about-page .nav-link:hover::after,
+.about-page .nav-link.active::after {
+    width: 100%;
+}
+
+/* Footer - World Class Styling */
+.footer {
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    color: rgba(255, 255, 255, 0.9);
+    padding: 80px 0 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-section p,
+.footer-section ul li a {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-section ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 60px;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 /* Responsive Design */
+
+/* Fix lint: standard mask property */
+.founder-photo::before {
+    mask: 
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+}
 @media (max-width: 768px) {
     .hero-about-us h1 {
         font-size: 2.5rem;
