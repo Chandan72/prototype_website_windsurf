@@ -1,0 +1,16 @@
+first prompt[1]:-<<<<<<Project Brief: AI Automation Agency Website Development**
+
+**Overview:** Build a high-impact, professional website for an AI Automation Agency. The site's primary goal is to attract and convert B2B clients by showcasing our tiered AI services (Process Automation, Advanced AI, Custom AI Agents) and demonstrating tangible ROI.
+
+**Key Website Goals:**
+* Project authority and trust.
+* Guide visitors from awareness to conversion.
+* Feature compelling case studies and client testimonials.
+* Provide clear calls-to-action (CTAs) and lead capture.
+
+**Tech Stack:**
+* **Front-End:** Pure **HTML5**, **CSS3**, and **Vanilla JavaScript**.
+* **Styling Focus:** Modern, clean, and professional aesthetic with subtle, purposeful animations (e.g., hover states, on-scroll reveals, micro-interactions). Emphasis on B2B sophistication, not playful.
+* **Interactivity:** Implement dynamic elements for enhanced UX, including conceptual interactive demos and high-conversion forms.
+
+**Initial Task:** Generate the foundational HTML structure for the homepage based on a "Hero Section," "Social Proof (Client Logos)," "Problem/Solution Framework," and "Service Tiers Overview.">>>>>
