@@ -127,6 +127,14 @@ function animateCounter(element) {
     const timer = setInterval(() => {
         current += increment;
         if (current >= number) {
+    function update(now) {
+        const progress = Math.min((now - startTime) / duration, 1);
+        const value = Math.floor(progress * target);
+        element.textContent = `${prefix}${value.toLocaleString()}${suffix}`;
+        if (progress < 1) requestAnimationFrame(update);
+    }
+
+    requestAnimationFrame(update);
             current = number;
             clearInterval(timer);
         }
@@ -139,7 +147,7 @@ function animateCounter(element) {
         } else {
             displayValue = Math.floor(current);
         }
-        
+
         element.textContent = displayValue + suffix.replace(/[KM]/g, '');
     }, duration / steps);
 }

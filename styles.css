@@ -42,21 +42,38 @@
     --gradient-dark: linear-gradient(135deg, var(--color-dark) 0%, var(--color-medium-gray) 100%);
     --gradient-light: linear-gradient(135deg, var(--color-white) 0%, var(--color-bg-gray) 100%);
     
-    /* === TYPOGRAPHY SYSTEM === */
-    --font-family-heading: 'Montserrat', 'Arial Black', sans-serif;
+    /* === BOLD TYPOGRAPHY SYSTEM === */
+    /* Space Grotesk: Modern, geometric, innovative for headlines */
+    --font-family-heading: 'Space Grotesk', 'Arial Black', sans-serif;
+    /* Inter: Highly readable, optimized for screens */
     --font-family-body: 'Inter', 'Arial', sans-serif;
     
-    /* Responsive Typography Scale */
-    --font-size-xs: 0.75rem;    /* 12px */
-    --font-size-sm: 0.875rem;   /* 14px */
-    --font-size-base: 1rem;     /* 16px */
-    --font-size-lg: 1.125rem;   /* 18px */
-    --font-size-xl: 1.25rem;    /* 20px */
-    --font-size-2xl: 1.5rem;    /* 24px */
-    --font-size-3xl: 1.875rem;  /* 30px */
-    --font-size-4xl: 2.25rem;   /* 36px */
-    --font-size-5xl: 3rem;      /* 48px */
-    --font-size-6xl: 3.75rem;   /* 60px */
+    /* Typography Hierarchy for Innovation */
+    --font-family-display: 'Space Grotesk', sans-serif;  /* Hero titles */
+    --font-family-headline: 'Space Grotesk', sans-serif; /* Section headers */
+    --font-family-subhead: 'Inter', sans-serif;          /* Subtitles */
+    --font-family-text: 'Inter', sans-serif;             /* Body text */
+    --font-family-caption: 'Inter', sans-serif;          /* Small text */
+    
+    /* Responsive Typography Scale - Optimized for Innovation */
+    --font-size-xs: 0.75rem;    /* 12px - Captions */
+    --font-size-sm: 0.875rem;   /* 14px - Small text */
+    --font-size-base: 1rem;     /* 16px - Body text */
+    --font-size-lg: 1.125rem;   /* 18px - Large body */
+    --font-size-xl: 1.25rem;    /* 20px - Subheadings */
+    --font-size-2xl: 1.5rem;    /* 24px - Small headlines */
+    --font-size-3xl: 1.875rem;  /* 30px - Medium headlines */
+    --font-size-4xl: 2.25rem;   /* 36px - Large headlines */
+    --font-size-5xl: 3rem;      /* 48px - Hero titles */
+    --font-size-6xl: 3.75rem;   /* 60px - Display titles */
+    --font-size-7xl: 4.5rem;    /* 72px - Mega displays */
+    --font-size-8xl: 6rem;      /* 96px - Ultra displays */
+    
+    /* Mobile-First Responsive Scales */
+    --font-size-hero-mobile: 2.5rem;    /* 40px */
+    --font-size-hero-tablet: 3.5rem;    /* 56px */
+    --font-size-hero-desktop: 4.5rem;   /* 72px */
+    --font-size-hero-xl: 5.5rem;        /* 88px */
     
     /* Font Weights */
     --font-weight-light: 300;
@@ -155,17 +172,118 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-/* ===== TYPOGRAPHY SYSTEM ===== */
-/* Sophisticated hierarchy with generous spacing */
+/* ===== BOLD TYPOGRAPHY SYSTEM ===== */
+/* Space Grotesk + Inter: Innovation meets readability */
 
+/* Base heading styles */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-heading);
     font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-    color: var(--color-dark);
-    margin-bottom: var(--spacing-lg);
+    letter-spacing: -0.02em;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+}
+
+/* Typography Hierarchy Classes */
+.display-xl {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-8xl);
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+}
+
+.display-lg {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-7xl);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+}
+
+.display-md {
+    font-family: var(--font-family-display);
+    font-size: var(--font-size-6xl);
+    font-weight: 600;
+    line-height: 1;
     letter-spacing: -0.025em;
 }
+
+.headline-xl {
+    font-family: var(--font-family-headline);
+    font-size: var(--font-size-5xl);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.headline-lg {
+    font-family: var(--font-family-headline);
+    font-size: var(--font-size-4xl);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+}
+
+.headline-md {
+    font-family: var(--font-family-headline);
+    font-size: var(--font-size-3xl);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.subhead-lg {
+    font-family: var(--font-family-subhead);
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+}
+
+.body-xl {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-lg);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.body-lg {
+    font-family: var(--font-family-text);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.caption {
+    font-family: var(--font-family-caption);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .display-xl { font-size: var(--font-size-hero-mobile); }
+    .display-lg { font-size: var(--font-size-5xl); }
+    .display-md { font-size: var(--font-size-4xl); }
+    .headline-xl { font-size: var(--font-size-3xl); }
+    .headline-lg { font-size: var(--font-size-2xl); }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .display-xl { font-size: var(--font-size-hero-tablet); }
+    .display-lg { font-size: var(--font-size-6xl); }
+}
+
+@media (min-width: 1025px) {
+    .display-xl { font-size: var(--font-size-hero-desktop); }
+}
+
+@media (min-width: 1440px) {
+    .display-xl { font-size: var(--font-size-hero-xl); }
+}
+
 
 h1 {
     font-size: var(--font-size-5xl);
@@ -1007,11 +1125,13 @@ a:hover {
 }
 
 .hero-title {
+    font-family: var(--font-family-display);
     font-size: var(--font-size-5xl);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.05;
     margin-bottom: var(--spacing-lg);
     color: var(--neutral-900);
+    letter-spacing: -0.02em;
 }
 
 .gradient-text {

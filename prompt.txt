@@ -112,3 +112,7 @@ This prompt gives "Cascade" a very clear understanding of what you need for your
 DESIGN/ANIMATIONS/UI/UX PROMPTS:::
 
 1>>> Design a cinematic hero section for introverted.ai with a dark gradient (navy to deep purple) and subtle particle background that conveys cutting-edge automation.
+
+2>>>Propose a bold headline typography pairing (space-grotesk + inter) that communicates innovation yet remains readable across breakpoints.
+
+3>>>
