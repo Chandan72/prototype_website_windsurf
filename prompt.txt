@@ -107,3 +107,8 @@ Generate clean, semantic HTML5 for each of these three service pages, following 
 ---
 
 This prompt gives "Cascade" a very clear understanding of what you need for your service pages, enabling it to generate robust HTML content that you can then style with CSS and enhance with JavaScript.>>>>>
+
+
+DESIGN/ANIMATIONS/UI/UX PROMPTS:::
+
+1>>> Design a cinematic hero section for introverted.ai with a dark gradient (navy to deep purple) and subtle particle background that conveys cutting-edge automation.
