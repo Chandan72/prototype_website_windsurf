@@ -14,34 +14,27 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="index.html">AI Automation Agency</a>
+                <h2>introverted.<span class="accent">ai</span></h2>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link active">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="impact-approach.html" class="nav-link">Impact &amp; Approach</a>
-                </li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a href="#" class="nav-link">Services</a>
+                    <a href="#" class="nav-link" onclick="event.preventDefault();">Services</a>
                     <div class="dropdown-content">
                         <a href="process-automation.html">Process Automation</a>
-                        <a href="ai-consulting.html">AI Consulting</a>
-                        <a href="custom-solutions.html">Custom Solutions</a>
+                        <a href="advanced-ai.html">Advanced AI</a>
+                        <a href="custom-ai-agents.html">Custom AI Agents</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
+                <li><a href="impact-approach.html" class="nav-link">Impact &amp; Approach</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link cta-button" onclick="openConsultationModal(); event.preventDefault();">Free Consultation</a></li>
             </ul>
             <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>

@@ -94,14 +94,9 @@ function initializeAnimations() {
 
 // Scroll Effects
 function initializeScrollEffects() {
-    // Parallax effect for hero background
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
+    // (Parallax effect removed – previously caused layout shift on scroll)
+    // Smooth scrolling handled via CSS scroll-behavior and in-page link logic.
+
     
     // Counter animation for stats
     const stats = document.querySelectorAll('.stat-number');

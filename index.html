@@ -15,17 +15,22 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>AI<span class="accent">Automate</span></h2>
+                <h2>introverted.<span class="accent">ai</span></h2>
             </div>
             <ul class="nav-menu">
-                <li><a href="#services" class="nav-link">Services</a></li>
-<li><a href="process-automation.html" class="nav-link">Process Automation</a></li>
-<li><a href="advanced-ai.html" class="nav-link">Advanced AI</a></li>
-<li><a href="custom-ai-agents.html" class="nav-link">Custom AI Agents</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link" onclick="event.preventDefault();">Services</a>
+                    <div class="dropdown-content">
+                        <a href="process-automation.html">Process Automation</a>
+                        <a href="advanced-ai.html">Advanced AI</a>
+                        <a href="custom-ai-agents.html">Custom AI Agents</a>
+                    </div>
+                </li>
                 <li><a href="impact-approach.html" class="nav-link">Impact & Approach</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#consultation" class="nav-link cta-button">Free Consultation</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="#" class="nav-link cta-button" onclick="openConsultationModal(); event.preventDefault();">Free Consultation</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -65,9 +70,7 @@
                         <button class="cta-primary" onclick="openConsultationModal()">
                             Get Your Free ROI Assessment
                         </button>
-                        <button class="cta-secondary" onclick="scrollToSection('case-studies')">
-                            View Case Studies
-                        </button>
+                        <a href="impact-approach.html" class="btn btn-secondary hover-lift" style="text-decoration:none;">View Impact &amp; Approach</a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -94,32 +97,7 @@
         </div>
     </section>
 
-    <!-- Social Proof Section -->
-    <section class="social-proof">
-        <div class="container">
-            <p class="social-proof-text">Trusted by industry leaders</p>
-            <div class="client-logos">
-                <div class="logo-item">
-                    <div class="logo-placeholder">TechCorp</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-placeholder">InnovateCo</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-placeholder">DataSystems</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-placeholder">AutoFlow</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-placeholder">SmartOps</div>
-                </div>
-                <div class="logo-item">
-                    <div class="logo-placeholder">FutureTech</div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Problem/Solution Framework -->
     <section class="problem-solution">

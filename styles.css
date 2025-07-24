@@ -422,13 +422,12 @@ a:hover {
 .nav-link::after {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 10%;
     bottom: -2px;
     width: 0;
     height: 2px;
     background: var(--gradient-primary);
     border-radius: var(--border-radius-full);
-    transform: translateX(-50%);
     transition: var(--transition-normal);
 }
 
@@ -1242,13 +1241,37 @@ a:hover {
 
 .modal-content {
     background-color: var(--white);
-    margin: 5% auto;
+    margin: 3% auto;
     padding: var(--spacing-2xl);
     border-radius: 16px;
-    width: 90%;
-    max-width: 500px;
+    width: 92%;
+    max-width: 540px;
+    max-height: 85vh; /* keep within viewport */
+    overflow-y: auto; /* allow scrolling */
     position: relative;
     box-shadow: var(--shadow-xl);
+    scrollbar-width: thin;
+}
+
+/* Mobile optimisation */
+@media (max-width: 640px) {
+    .modal-content {
+        width: 95%;
+        padding: var(--spacing-xl);
+        max-height: 90vh;
+    }
+}
+
+/* Hide default scrollbar on WebKit */
+.modal-content::-webkit-scrollbar {
+    width: 6px;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.15);
+    border-radius: 3px;
 }
 
 .close {
