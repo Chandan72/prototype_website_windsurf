@@ -118,6 +118,12 @@ function initializeScrollEffects() {
 function animateCounter(element) {
     const text = element.textContent;
     const number = parseFloat(text.replace(/[^0-9.]/g, ''));
+    
+    // Skip animation for non-numeric text (like "IIT")
+    if (isNaN(number) || number === 0) {
+        return; // Keep original text as is
+    }
+    
     const suffix = text.replace(/[0-9.,]/g, '');
     const duration = 2000;
     const steps = 60;
