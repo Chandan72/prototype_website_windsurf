@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.85);
+    background: #ffffff;
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -75,7 +75,7 @@
     cursor: pointer;
 }
 
-.about-page .nav-link::after {
+.nav-link::after {
     content: '';
     position: absolute;
     left: 10%;
@@ -105,7 +105,7 @@
     background-color: rgba(0, 77, 122, 0.08);
 }
 
-.about-page .nav-link.active::after {
+.nav-link.active::after {
     width: 80%;
 }
 
@@ -878,7 +878,7 @@
 
 /* Navigation - World Class Styling */
 .about-page .navbar {
-    background: rgba(255, 255, 255, 0.15);
+    background: #ffffff;
     backdrop-filter: blur(20px) saturate(180%);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -886,21 +886,18 @@
 }
 
 .about-page .navbar.scrolled {
-    background: rgba(15, 12, 41, 0.85);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px) saturate(180%);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.about-page .navbar.scrolled .nav-link {
-    color: rgba(255, 255, 255, 0.9);
-}
+/* Remove color override so links stay consistent */
 
-.about-page .navbar.scrolled .nav-link:hover {
-    color: #ffffff;
-}
 
+
+/* Disable hover background change */
 .about-page .navbar:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: #ffffff;
 }
 
 /* Dropdown Menu */
@@ -941,13 +938,13 @@
     animation: fadeInUp 0.3s ease-out;
 }
 
-.about-page .nav-link,
-.about-page .nav-link:visited {
+.nav-link,
+.nav-link:visited {
     position: relative;
     font-weight: 600;
     font-size: 1rem;
     letter-spacing: 0.3px;
-    color: rgba(255, 255, 255, 0.95);
+    color: #4A4A4A;
     padding: 0.5rem 0.75rem;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -968,7 +965,7 @@
 }
 
 
-.about-page .nav-link::after {
+.nav-link::after {
     content: '';
     position: absolute;
     left: 0;
@@ -980,12 +977,12 @@
     border-radius: 2px;
 }
 
-.about-page .nav-link:hover {
-    color: #f0f8ff;
+.nav-link:hover {
+    color: #004D7A;
 }
 
-.about-page .nav-link:hover::after,
-.about-page .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
