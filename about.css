@@ -1,5 +1,58 @@
 /* About Us Page - World Class Design */
 
+/* Navigation - Exact Same as Home Page */
+.about-page .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+/* Enhanced navbar on scroll - Exact Same as Home Page */
+.about-page .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(32px) saturate(200%);
+    -webkit-backdrop-filter: blur(32px) saturate(200%);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 77, 122, 0.1);
+}
+
+/* Nav links styling */
+.about-page .nav-link {
+    color: #374151;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.about-page .nav-link:hover {
+    color: #004d7a;
+}
+
+.about-page .nav-link.active {
+    color: #004d7a;
+    font-weight: 600;
+}
+
+/* Logo styling */
+.about-page .nav-logo h2 a {
+    color: #1f2937;
+    text-decoration: none;
+}
+
+.about-page .nav-logo .accent {
+    color: #004d7a;
+}
+
 /* Global Animations */
 @keyframes fadeInUp {
     from {
@@ -52,51 +105,64 @@
     }
 }
 
-/* Hero Section - Premium Design */
+/* Hero Section - Cinematic Design Inspired by Home Page */
 .hero-about-us {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    color: white;
-    padding: 140px 0 100px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    min-height: 80vh;
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #1e3a8a 100%);
+    min-height: 100vh;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+    color: white;
 }
 
-.hero-about-us::before {
-    content: '';
+/* Particle Background Animation */
+.hero-about-us .particle-background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(120, 119, 198, 0.2) 0%, transparent 50%);
+        radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(96, 165, 250, 0.4), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.2), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(96, 165, 250, 0.3), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.2), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: particleFloat 20s linear infinite;
     z-index: 1;
 }
 
-.hero-about-us::after {
-    content: '';
+@keyframes particleFloat {
+    0% { transform: translateY(0px) translateX(0px); }
+    33% { transform: translateY(-10px) translateX(10px); }
+    66% { transform: translateY(5px) translateX(-5px); }
+    100% { transform: translateY(0px) translateX(0px); }
+}
+
+/* Hero Overlay for Depth */
+.hero-about-us .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(96, 165, 250, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+    z-index: 2;
 }
 
 .hero-about-us .container {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
-.hero-about-us h1 {
+.hero-about-us .hero-title {
     font-size: 4rem;
     font-weight: 800;
     margin-bottom: 2rem;
@@ -104,23 +170,222 @@
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+/* Gradient Text Effect */
+.hero-about-us .gradient-text {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: fadeInUp 1s ease-out;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: gradientShift 3s ease-in-out infinite;
 }
 
-.hero-subtitle {
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.hero-about-us .hero-subtitle {
     font-size: 1.4rem;
-    font-weight: 400;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.7;
-    max-width: 850px;
-    margin: 0 auto;
-    opacity: 0.95;
-    animation: fadeInUp 1s ease-out 0.3s both;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Hero Stats */
+.hero-about-us .hero-stats {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.hero-about-us .stat-item {
+    text-align: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 20px rgba(96, 165, 250, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    animation: floatStat 6s ease-in-out infinite;
+    min-width: 180px;
+}
+
+.hero-about-us .stat-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(96, 165, 250, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.hero-about-us .stat-item:nth-child(1) { animation-delay: 0s; }
+.hero-about-us .stat-item:nth-child(2) { animation-delay: 2s; }
+.hero-about-us .stat-item:nth-child(3) { animation-delay: 4s; }
+
+@keyframes floatStat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+.hero-about-us .stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-about-us .stat-label {
+    display: block;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Hero CTA Buttons */
+.hero-about-us .hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-about-us .cta-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.hero-about-us .cta-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+}
+
+/* Responsive Design for Cinematic Hero */
+@media (max-width: 768px) {
+    .hero-about-us {
+        min-height: 90vh;
+        padding-top: 140px;
+        padding-bottom: 2rem;
+    }
+    
+    .hero-about-us .container {
+        padding: 0 1rem;
+    }
+    
+    .hero-about-us .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+    }
+    
+    .hero-about-us .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+    
+    .hero-about-us .hero-stats {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .hero-about-us .stat-item {
+        min-width: 150px;
+        padding: 1rem;
+        flex: 1;
+        max-width: 180px;
+    }
+    
+    .hero-about-us .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .hero-about-us .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .hero-about-us .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .hero-about-us .cta-primary {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-about-us {
+        padding-top: 160px;
+    }
+    
+    .hero-about-us .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-about-us .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-about-us .hero-stats {
+        gap: 0.5rem;
+    }
+    
+    .hero-about-us .stat-item {
+        min-width: 120px;
+        padding: 0.8rem;
+        max-width: 140px;
+    }
+    
+    .hero-about-us .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .hero-about-us .stat-label {
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
 }
 
 /* Origin Story Section - Premium Design */
