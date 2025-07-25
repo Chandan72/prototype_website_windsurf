@@ -49,55 +49,105 @@
         </div>
     </section>
 
-    <!-- Lead Capture Form Section -->
-    <section class="lead-form-section">
-        <div class="container">
-            <div class="form-wrapper">
-                <div class="form-header">
-                    <h2>Request Your Custom Automation Roadmap</h2>
-                    <p>Tell us about your biggest business challenge, and we'll show you how AI can solve it. This obligation-free assessment is the first step towards a more efficient future.</p>
+    <!-- Split-Screen Contact Section -->
+    <section class="split-contact-section">
+        <div class="split-container">
+            <!-- Map Side -->
+            <div class="map-side">
+                <div class="map-content">
+                    <h2>Visit Our Office in Kolkata</h2>
+                    <div class="address-info">
+                        <address>
+                            <strong>Introverted.ai Headquarters</strong><br>
+                            123 Business Lane<br>
+                            Salt Lake City<br>
+                            Kolkata 700091<br>
+                            West Bengal, India
+                        </address>
+                        <div class="contact-details">
+                            <p><strong>Phone:</strong> +91 98765 43210</p>
+                            <p><strong>Email:</strong> chandan01ai@gmail.com</p>
+                            <p><strong>Hours:</strong> Mon-Fri 9:00 AM - 6:00 PM IST</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.744131651842!2d88.38072057489512!3d22.58988643265551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM1JzIzLjYiTiA4OMKwMjInNTQuNyJF!5e0!3m2!1sen!2sin!4v1678886400000!5m2!1sen!2sin"
+                            width="100%" 
+                            height="400" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
                 </div>
-                
-                <form class="lead-form" id="contactForm" action="#" method="POST">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="fullName">Full Name *</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Chandan Kumar" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Business Email *</label>
-                            <input type="email" id="email" name="email" placeholder="chandan01ai@gmail.com" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="company">Company Name *</label>
-                            <input type="text" id="company" name="company" placeholder="Introverted.ai" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="jobTitle">Your Job Title</label>
-                            <input type="text" id="jobTitle" name="jobTitle" placeholder="CEO, Head of Operations, etc.">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+91 7209062108">
+            </div>
+            
+            <!-- Form Side -->
+            <div class="form-side">
+                <div class="form-content">
+                    <div class="form-header">
+                        <h2>Request Your Custom Automation Roadmap</h2>
+                        <p>Tell us about your biggest business challenge, and we'll show you how AI can solve it. This obligation-free assessment is the first step towards a more efficient future.</p>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm" action="#" method="POST">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">Full Name *</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Chandan Kumar" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Business Email *</label>
+                                <input type="email" id="email" name="email" placeholder="chandan01ai@gmail.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="company">Company Name *</label>
+                                <input type="text" id="company" name="company" placeholder="Introverted.ai" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="jobTitle">Your Job Title</label>
+                                <input type="text" id="jobTitle" name="jobTitle" placeholder="CEO, Head of Operations, etc.">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="companySize">Company Size</label>
+                                <select id="companySize" name="companySize">
+                                    <option value="">Select company size</option>
+                                    <option value="1-10">1-10 employees</option>
+                                    <option value="11-50">11-50 employees</option>
+                                    <option value="51-200">51-200 employees</option>
+                                    <option value="201-1000">201-1000 employees</option>
+                                    <option value="1000+">1000+ employees</option>
+                                </select>
+                            </div>
                         </div>
                         
                         <div class="form-group full-width">
-                            <label for="challenge">What is your biggest business challenge right now?</label>
-                            <textarea id="challenge" name="challenge" rows="5" placeholder="Describe your automation needs, inefficiencies, or strategic goals..."></textarea>
+                            <label for="challenge">What's your biggest operational challenge? *</label>
+                            <textarea id="challenge" name="challenge" rows="4" placeholder="Describe the repetitive tasks, bottlenecks, or inefficiencies that are holding your business back..." required></textarea>
                         </div>
-                    </div>
-                    
-                    <div class="trust-signals">
-                        <p>We respect your privacy. Your information is safe with us and will never be shared with third parties.</p>
-                        <a href="/privacy-policy.html" class="privacy-link">Read our Privacy Policy</a>
-                    </div>
-                    
-                    <button type="submit" class="cta-button">Get My Custom Roadmap</button>
-                </form>
+                        
+                        <div class="form-group full-width">
+                            <label for="goals">What would success look like for you?</label>
+                            <textarea id="goals" name="goals" rows="3" placeholder="Time savings, cost reduction, improved accuracy, better customer experience..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button primary">
+                            Get My Custom Automation Roadmap
+                            <span class="button-arrow">→</span>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -169,35 +219,7 @@
         </div>
     </section>
 
-    <!-- Location & Map Section -->
-    <section class="location-map">
-        <div class="container">
-            <h2>Find Our Office in Kolkata</h2>
-            
-            <div class="location-content">
-                <div class="address-info">
-                    <address>
-                        123 Business Lane<br>
-                        Salt Lake City<br>
-                        Kolkata 700091<br>
-                        West Bengal, India
-                    </address>
-                </div>
-                
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.744131651842!2d88.38072057489512!3d22.58988643265551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM1JzIzLjYiTiA4OMKwMjInNTQuNyJF!5e0!3m2!1sen!2sin!4v1678886400000!5m2!1sen!2sin"
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Social Media Links -->
     <section class="social-media-links">
