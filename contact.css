@@ -1071,6 +1071,29 @@
     }
 }
 
+/* Submit Button Visibility Enhancements */
+.contact-form .cta-button:hover {
+    background: linear-gradient(135deg, #5a67d8 0%, var(--primary-blue) 100%);
+    transform: translateY(-2px);
+}
+
+.contact-form .cta-button {
+    width: 100%;              /* full-width for better visibility */
+    display: block;           /* occupy its own line */
+    margin-top: 24px;         /* clear spacing from previous field */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Keep the button accessible on smaller screens */
+@media (max-width: 768px) {
+    .contact-form .cta-button {
+        position: sticky;      /* stay in view while scrolling the form */
+        bottom: 0;
+        margin-top: 32px;
+        box-shadow: 0 -2px 20px rgba(0,0,0,0.08);
+    }
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {

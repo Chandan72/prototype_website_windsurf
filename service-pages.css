@@ -604,6 +604,13 @@
     font-size: var(--font-size-sm);
 }
 
+.process-diagram {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive Design for Service Pages */
 @media (max-width: 768px) {
     .service-title {

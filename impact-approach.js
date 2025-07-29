@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollAnimations();
     initializeCounterAnimations();
     initializeHoverEffects();
+    initializeIllusionGallery();
     initializeNavbarScroll();
 });
 
@@ -105,6 +106,47 @@ function initializeCounterAnimations() {
         
         requestAnimationFrame(updateCounter);
     }
+}
+
+// Scroll illusion parallax effect
+function initializeIllusionGallery() {
+    const gallery = document.querySelector('.illusion-gallery');
+    if (!gallery) return;
+    const layers = Array.from(gallery.querySelectorAll('.illusion-layer'));
+    const total = layers.length;
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const currentY = window.scrollY;
+        const directionDown = currentY > lastScrollY;
+        lastScrollY = currentY;
+
+        const rect = gallery.getBoundingClientRect();
+        const windowH = window.innerHeight;
+        if (rect.bottom < 0 || rect.top > windowH) return; // outside viewport
+
+        // progress within the section (0-1)
+        const progress = Math.min(Math.max((windowH - rect.top) / (windowH + rect.height), 0), 1);
+
+        // Determine frame index (0 → total-1)
+        let frame = Math.floor(progress * total);
+        frame = Math.min(frame, total - 1);
+        if (!directionDown) {
+            frame = total - 1 - frame; // reverse order when scrolling up
+        }
+
+        // Update layers: show only current frame (fade others)
+        layers.forEach((layer, idx) => {
+            const targetOpacity = idx === frame ? 1 : 0;
+            layer.style.opacity = targetOpacity;
+        });
+
+        // Parallax translation for subtle depth
+        layers.forEach(layer => {
+            const speed = parseFloat(layer.dataset.speed) || 0;
+            layer.style.transform = `translateY(${(progress - 0.5) * speed * 200}px)`;
+        });
+    });
 }
 
 // Enhanced hover effects
